@@ -1,0 +1,9 @@
+N=1000;
+x=-2+4*rand(1,N);
+f=inline('5*x.^2-exp(x.*sin(x))-8');
+y=f(x);
+[value,idx]=min(y);
+xmin=x(idx)
+ymin=y(idx)
+x=-2:0.01:2;
+plot(x,f(x),xmin,ymin,'ro')
